@@ -80,12 +80,16 @@ public class GradientCircularProgress {
     }
     
     public func dismiss() -> Void {
+        dismiss(0)
+    }
+    
+    public func dismiss(delay: Double) -> Void {
         if available {
-           return
+            return
         }
         
         if let vc = progressViewController {
-            vc.dismiss(0.6)
+            vc.dismiss(delay)
         }
         
         cleanup(1.4, completionHandler: nil)
