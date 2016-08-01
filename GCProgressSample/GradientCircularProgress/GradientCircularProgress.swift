@@ -117,15 +117,11 @@ extension GradientCircularProgress {
             return
         }
         
-        vc.ratio = ratio
-    }
-    
-    public func dismiss() -> Void {
-        dismiss(0)
+        dismiss(delay: Double(0))
     }
     
     public func dismiss(delay: Double) -> Void {
-        if available {
+        if isAvailable {
             return
         }
         

@@ -76,11 +76,11 @@ class CircularProgressView : UIView {
         self.backgroundColor = UIColor.clear()
         self.layer.masksToBounds = true
         
-        NotificationCenter.default.addObserver(self,
+        NotificationCenter.default().addObserver(self,
                                                selector: #selector(viewDidEnterBackground(_:)),
                                                name: .UIApplicationDidEnterBackground,
                                                object: nil)
-        NotificationCenter.default.addObserver(self,
+        NotificationCenter.default().addObserver(self,
                                                selector: #selector(viewWillEnterForeground(_:)),
                                                name: .UIApplicationWillEnterForeground,
                                                object: nil)
@@ -91,7 +91,7 @@ class CircularProgressView : UIView {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default().removeObserver(self)
     }
     
     @objc private func viewDidEnterBackground(_ notification: Notification?) {

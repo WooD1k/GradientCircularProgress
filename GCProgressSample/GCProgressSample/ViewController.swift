@@ -234,7 +234,7 @@ extension ViewController {
             userInfo: nil,
             repeats: true
         )
-        RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
+        RunLoop.main().add(timer!, forMode: RunLoopMode.commonModes)
     }
     
     func updateMessage() {
@@ -278,7 +278,7 @@ extension ViewController {
             userInfo: nil,
             repeats: true
         )
-        RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
+        RunLoop.main().add(timer!, forMode: RunLoopMode.commonModes)
     }
     
     func updateProgressAtRatio() {
